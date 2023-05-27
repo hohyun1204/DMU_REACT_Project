@@ -1,23 +1,46 @@
 .header {
-    width: 1180px;
+    width: 1000px;
     height: 120px;
     margin: 0 auto;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
 }
 .logo {
-    width: 400px;
     float: left;
 }
 .logo_img {
     float: left;
-    width: 100px;
-    height: 100px;
+    margin-top: 40px;
+    width: 70px;
+    height: 70px;
 }
 .logo_title {
     float: left;
+    text-align: left;
+    margin-left: 15px;
 }
 .name {
+    display: block;
+    margin-top: 52px;
+    margin-left: 2px;
     color: #6DA6FE;
+    font-size: 16px;
+    font-weight: bold;
 }
 .sub_name {
-    font-size: 32px;
+    display: block;
+    font-size: 28px;
+}
+.menu {
+    float: right;
+    margin-top: 70px;
+    list-style-type: none;
+}
+.menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.menu_img {
+    width: 40px;
+    height: 40px;
 }

@@ -1,9 +1,15 @@
 import 'pages/Login/Login.css';
+import logo from 'assets/images/logo.png'
+import { Link } from 'react-router-dom';
 
 function Login(){
     return(
-        <div>
-            <h2>로그인</h2>
+        <div class="login">
+            <Link to="/"><img class="login_img" src={logo}></img></Link>
+            <div class="login_box">
+                <form>
+                </form>
+            </div>
         </div>
     );
 }

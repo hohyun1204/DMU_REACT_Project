@@ -1,12 +1,26 @@
 import Header from 'components/Header/MainHeader';
 import Container from 'components/Container/Container';
+import View from 'pages/View/View'
+import Search from 'pages/Search/Search'
+import Write from 'pages/Write/Write'
+import MyPage from 'pages/MyPage/MyPage'
+import Logout from 'pages/Logout/Logout'
 import 'pages/Main/Main.css';
+import { Routes, Route } from 'react-router-dom';
 
 function Main(){
     return(
         <div class="wrap">
             <Header />
-            <Container />
+            <Container>
+                <Routes>
+                    <Route path="/*" element={<View />} />
+                    <Route path="/search" element={<Search />} />
+                    <Route path="/write" element={<Write />} />
+                    <Route path="/mypage" element={<MyPage />} />
+                    <Route path="/logout" element={<Logout />} />
+                </Routes>
+            </Container>
         </div>
     );
 }

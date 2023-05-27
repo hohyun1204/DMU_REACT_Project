@@ -1,9 +1,9 @@
 import 'components/Container/Container.css';
 
-function Container(){
+function Container({children}){
     return(
-        <div>
-            <h2>내용</h2>
+        <div class="container">
+            {children}
         </div>
     );
 }
