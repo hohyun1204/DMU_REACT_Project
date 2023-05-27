@@ -1,0 +1,23 @@
+.header {
+    width: 1180px;
+    height: 120px;
+    margin: 0 auto;
+}
+.logo {
+    width: 400px;
+    float: left;
+}
+.logo_img {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+.logo_title {
+    float: left;
+}
+.name {
+    color: #6DA6FE;
+}
+.sub_name {
+    font-size: 32px;
+}
