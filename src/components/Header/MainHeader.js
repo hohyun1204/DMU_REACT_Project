@@ -10,7 +10,7 @@ function MainHeader(){
     return(
         <div class="header">
             <div class="logo">
-                <Link to="/"><img class="logo_img" src={logo}></img></Link>
+                <Link to="/"><img class="logo_img" src={logo} alt="로고 이미지"></img></Link>
                 <div class="logo_title">
                     <span class="name">강의어때</span>
                     <span class="sub_name">동양미래대</span>

@@ -1,0 +1,53 @@
+.user_wrap {
+    width: 400px;
+    margin: 0 auto;
+}
+.user_img {
+    margin-top: 120px;
+    width: 130px;
+    height: 130px;
+}
+.user_box {
+    width: 400px;
+    margin-top: 30px;
+}
+.input_box {
+    width: 400px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.text {
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+input::placeholder {
+    color: #747474;
+}
+.submit {
+    background-color: #B7D2FC;
+    margin: 10px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+.help_text {
+    color: #4B4B4B;
+}
+.separate {
+    margin: 0 5px;
+}
+.link {
+    text-decoration: none;
+}
+.user_title {
+    display: block;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.title_font {
+    color: #278BFF;
+}

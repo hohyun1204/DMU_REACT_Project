@@ -1,13 +1,35 @@
-.login {
-    width: 500px;
-    margin: 0 auto;
+.login_check {
+    float: left;
 }
-.login_img {
-    margin-top: 120px;
-    width: 130px;
-    height: 130px;
+.checkbox {
+    position: absolute;
+    left: -999em;
 }
-.login_box {
-    margin-top: 30px;
-    width: 500px;
+.circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #666;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+    background-image: url(/src/assets/images/check_gray.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.checkbox:checked + .circle{
+    background-color: #96B3FC;
+    border-color: #96B3FC;
+    background-image: url(/src/assets/images/check_white.png);
+}
+.keep_text {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #4B4B4B;
+}
+.login_help {
+    float: right;
 }
