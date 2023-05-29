@@ -1,7 +1,7 @@
 function Write(){
     return(
         <div>
-            글쓰기
+            글 쓰기
         </div>
     );
 }

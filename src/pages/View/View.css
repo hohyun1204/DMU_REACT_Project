@@ -1,0 +1,24 @@
+.view_wrap {
+    width: 1000px;
+}
+.view_container {
+    float: left;
+    width: 700px;
+}
+.view_box {
+    float: left;
+    width: 700px;
+    height: 80px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.hot_box {
+    float: right;
+    width: 270px;
+    height: 170px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+}

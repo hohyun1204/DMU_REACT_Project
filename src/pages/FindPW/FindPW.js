@@ -1,7 +1,6 @@
 import "pages/FindPW/FindPW.css"
 import { CheckNumber } from 'utils/UserKeyPress/CheckNumber';
 import { EnterPress } from 'utils/UserKeyPress/EnterPress';
-import { Navigate } from "react-router-dom";
 
 const CheckEmail = (e) => {
     e.preventDefault();

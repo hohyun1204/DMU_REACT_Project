@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 import { CheckNumber } from 'utils/UserKeyPress/CheckNumber';
 import { EnterPress } from 'utils/UserKeyPress/EnterPress';
 
+const LoginAction = (e) => {
+    e.preventDefault();
+}
+
 function Login(){
     return(
         <div class="user_box">
-            <form>
+            <form onSubmit={LoginAction}>
                 <input class="input_box text" type="text" name="id" onKeyUp={CheckNumber} onKeyDown={EnterPress} maxLength={8} placeholder='학번'></input>
                 <input class="input_box text" type="password" id="pw" name="pw" placeholder='비밀번호'></input>
                 <input class="input_box submit" type="submit" value="로그인"></input>
