@@ -1,0 +1,102 @@
+.write_wrap {
+    width: 1000px;
+}
+.write_box {
+    width: 1000px;
+}
+.write_header {
+    width: 1000px;
+    height: 60px;
+    border: 1px solid black;
+    border-bottom: 0;
+    box-sizing: border-box;
+}
+.write_header input:focus {
+    outline: none;
+}
+.write_lecture {
+    width: 600px;
+    height: 59px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 0 0 15px;
+    border: 0;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+}
+.write_professor {
+    width: 398px;
+    height: 59px;
+    font-size: 16px;
+    padding: 0 0 0 15px;
+    border: 0;
+    box-sizing: border-box;
+}
+.write_container {
+    width: 1000px;
+}
+.write_container textarea:focus {
+    outline: none;
+}
+.write_section {
+    width: 1000px;
+    height: 400px;
+    padding: 15px;
+    font-size: 14px;
+    resize: none;
+    border: 1px solid black;
+    border-bottom: 0;
+    box-sizing: border-box;
+}
+.write_footer {
+    width: 1000px;
+    height: 40px;
+    text-align: right;
+    margin-top: -3px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.checkbox {
+    position: absolute;
+    left: -999em;
+}
+.circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #666;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+    background-image: url(/src/assets/images/check_gray.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.checkbox:checked + .circle{
+    background-color: #96B3FC;
+    border-color: #96B3FC;
+    background-image: url(/src/assets/images/check_white.png);
+}
+.anonymous_text {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #4B4B4B;
+}
+.anonymous_check {
+    height: 40px;
+    margin-right: 10px;
+}
+.write_submit {
+    width: 50px;
+    height: 38px;
+    border: 0;
+    border-left: 1px solid black;
+    font-size: 14px;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #96B3FC;
+}
