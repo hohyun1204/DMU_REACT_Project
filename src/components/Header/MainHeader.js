@@ -17,22 +17,18 @@ function MainHeader(){
                 </div>
             </div>
             <ul class="menu">
-                    <li>
-                        <Link to="/search"><img class="menu_img" src={search} alt="검색 이미지"></img></Link>
-                    </li>
-                    <li>
-                        <Link to="/write"><img class="menu_img" src={write} alt="작성 이미지"></img></Link>
-                    </li>
-                    <li>
-                        {/* 로그인 안했으면 로그인 페이지로 이동 */}
-                        <Link to="/login"><img class="menu_img" src={user} alt="유저 이미지"></img></Link>
-                        {/* 로그인 했으면 마이 페이지로 이동 */}
-                        {/* <Link to="/MyPage"><img class="menu_img" src={user}></img></Link> */}
-                       
-                    </li>
-                    <li>
-                        <Link to="/logout"><img class="menu_img" src={logout} alt="로그아웃"></img></Link>
-                    </li>
+                <li>
+                    <Link to="/search"><img class="menu_img" src={search} alt="검색 이미지"></img></Link>
+                </li>
+                <li>
+                    <Link to="/write"><img class="menu_img" src={write} alt="작성 이미지"></img></Link>
+                </li>
+                <li>
+                    {/* 로그인 안했으면 로그인 페이지로 이동하는 아이콘 */}
+                    <Link to="/login"><img class="menu_img" src={user} alt="유저 이미지"></img></Link>
+                    {/* 로그인 했으면 로그아웃 페이지로 이동하는 아콘 */}
+                    {/* <Link to="/logout"><img class="menu_img" src={logout} alt="로그아웃"></img></Link> */}
+                </li>
             </ul>
         </div>
     );

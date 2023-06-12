@@ -1,7 +1,10 @@
+import { useLocation } from "react-router-dom";
+
 function DetailView(){
+    const location = useLocation();
     return(
         <div>
-            상세보기
+            {location.state?.id}번 글 상세보기
         </div>
     );
 }
