@@ -56,8 +56,16 @@
     font-weight: bold;
     margin: 10px 0px;
 }
+.detailview_lecture span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #4B4B4B;
+}
 .detailview_content {
     font-size: 13px;
+}
+.detailview_content pre {
+    margin: 0;
 }
 .detailview_footer {
     text-align: left;

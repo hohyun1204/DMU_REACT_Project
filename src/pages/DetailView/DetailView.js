@@ -1,44 +1,72 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import "pages/DetailView/DetailView.css"
 import user from 'assets/images/user2.png'
 import like from "assets/images/like.png"
 import comment from "assets/images/comment.png"
+import { likeAction } from "modules/boardReducer";
 
 function DetailView(){
-    const location = useLocation();
+    const { boards } = useSelector(state => state.boardReducer)
+    const { login_id } = useSelector(state => state.userReducer)
+    const { viewId } = useSelector(state => state.boardReducer)
+    const index = boards.findIndex(it => it.id === viewId);
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    let option = '';
+
+    if(login_id === boards[index].userid) {
+        option = <div class="detailview_option">
+                    <Link to="/" class="link link_separate"><span class="option_text">수정</span></Link>
+                    <Link to="/" class="link"><span class="option_text">삭제</span></Link>
+                </div>
+    }
+    const click_like = () => {
+        alert("준비중입니다.")
+        // dispatch(likeAction({
+        //     boardid: boards[index].id,
+        //     userid: login_id,
+        //     index: index
+        // }))
+        // navigate('/')
+    }
+
+    const onComment = (e) => {
+        e.preventDefault()
+        alert("준비중입니다.")
+    }
+
     return(
         <div class="detailview_wrap">
-            {/* {location.state?.id}번 글 상세보기 */}
             <div class="detailview_container">
                 <div class="detailview_box">
                     <div class="detailview_header">
                         <img class="detailview_userimg" src={user} alt="사용자 이미지" /> 
                         <div class="detailview_info">
-                            <span class="detailview_name">익명</span>
-                            <span class="detailview_time">3분 전</span>
+                            <span class="detailview_name">{boards[index].name}</span>
+                            <span class="detailview_time">{boards[index].date}</span>
                         </div>
-                        <div class="detailview_option">
-                            <Link to="/" class="link link_separate"><span class="option_text">수정</span></Link>
-                            <Link to="/" class="link"><span class="option_text">삭제</span></Link>
-                        </div>
+                        {option}
                     </div>
                     <div class="detailview_section">
                         <div class="detailview_lecture">
-                            웹 클라이언트 프로그래밍
+                            {boards[index].lecture}
+                            <span>{boards[index].professor} 교수님</span>
                         </div>
                         <div class="detailview_content">
-                            ㅏ아아아아<br/>
-                            ㅏ아아아아<br/>
-                            ㅏ아아아아<br/>
-                            ㅏ아아아아<br/>
+                            <pre>
+                                {boards[index].content}
+                            </pre>
                         </div>
                     </div>
                     <div class="detailview_footer">
                         <div class="detailview_status">
-                            <span class="detailview_like"><img class="detailview_img" src={like} alt="좋아요 이미지"/> 4</span>
-                            <span class="detailview_comment"><img class="detailview_img" src={comment} alt="말풍선 이미지"/> 6</span>
+                            <span class="detailview_like"><img class="detailview_img" src={like} alt="좋아요 이미지"/> {boards[index].like}</span>
+                            <span class="detailview_comment"><img class="detailview_img" src={comment} alt="말풍선 이미지"/> {boards[index].comment}</span>
                         </div>
-                        <span class="deatilview_button"><img class="detailview_img" src={like} alt="좋아요 이미지"/> 추천</span>
+                        <span class="deatilview_button" onClick={()=>{click_like()}}><img class="detailview_img" src={like} alt="좋아요 이미지"/> 추천</span>
                     </div>
                 </div>
                 <div class="detailview_commentbox">
@@ -72,7 +100,7 @@ function DetailView(){
                     </div>
                 </div>
                 <div class="detailview_writebox">
-                    <form>
+                    <form onSubmit={onComment}>
                         <input type="text" class="write_input" placeholder="댓글을 입력하세요."/>
                         <label for="anonymous" class="anonymous_check">
                             <input class="checkbox" type="checkbox" id="anonymous" name="anonymous" value="anonymous"></input>

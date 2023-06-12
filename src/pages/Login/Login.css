@@ -33,3 +33,6 @@
 .login_help {
     float: right;
 }
+.pointer {
+    cursor: pointer;
+}

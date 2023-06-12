@@ -19,7 +19,7 @@
 }
 .view_lecture {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: bold;
 }
 .view_professor {
     font-size: 12px;
@@ -38,6 +38,9 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+}
+.view_content span pre {
+    margin: 0;
 }
 .view_footer {
     text-align: left;
