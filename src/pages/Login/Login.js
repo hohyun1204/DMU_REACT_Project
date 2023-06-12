@@ -1,4 +1,7 @@
 import 'pages/Login/Login.css';
+
+import { useSelector } from 'react-redux'
+
 import { Link } from 'react-router-dom';
 import { CheckNumber } from 'utils/UserKeyPress/CheckNumber';
 import { EnterPress } from 'utils/UserKeyPress/EnterPress';
@@ -8,9 +11,28 @@ const LoginAction = (e) => {
 }
 
 function Login(){
+
+    const { users } = useSelector(state => state.userReducer)
+
+    console.log(users)
+
+    const onLogin = (e) => {
+        e.preventDefault()
+
+        const id = e.target.id.value
+        const pw = e.target.pw.value
+
+        console.log(users.findIndex(it => it.id === id))
+        if (users.findIndex(it => it.id === id) < 0) {
+            console.log("없어용")
+        } else {
+            console.log("있어용")
+        }
+    }
+
     return(
         <div class="user_box">
-            <form onSubmit={LoginAction}>
+            <form onSubmit={onLogin}>
                 <input class="input_box text" type="text" name="id" onKeyUp={CheckNumber} onKeyDown={EnterPress} maxLength={8} placeholder='학번'></input>
                 <input class="input_box text" type="password" id="pw" name="pw" placeholder='비밀번호'></input>
                 <input class="input_box submit" type="submit" value="로그인"></input>

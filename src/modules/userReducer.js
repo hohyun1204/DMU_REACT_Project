@@ -1,22 +1,28 @@
 const JOIN_USER = 'JOIN_USER';
 
-export const loginAction = (inputData) => ({
-    type: JOIN_USER,
-    inputData: {
-        id: inputData.id,
-        name: inputData.name
-    }
-})
+export const joinAction = (inputData) => {
 
-const initialState = {
-    
+    return {
+        type: JOIN_USER,
+        inputData: {
+            email: inputData.email,
+            id: inputData.id,
+            name: inputData.name,
+            password: inputData.password
+        }
+    }
 }
 
-export default function userReducer(state = initialState, action){
+const initialState = {
+    users: []
+}
+
+export default function userReducer(state = initialState, action) {
     switch(action.type) {
         case JOIN_USER:
             return {
-
+                users:
+                    [...state.users, action.inputData]
             }
         default:
             return state
