@@ -1,0 +1,153 @@
+.detailview_wrap {
+    width: 1000px;
+}
+.detailview_container {
+    float: left;
+    width: 700px;
+}
+.detailview_box {
+    width: 700px;
+    padding: 15px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.detailview_header {
+    width: 670px;
+    height: 35px;
+    text-align: left;
+}
+.detailview_info {
+    float: left;
+}
+.detailview_info span {
+    display: block;
+}
+.detailview_userimg {
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+}
+.detailview_name {
+    font-size: 16px;
+    font-weight: bold;
+}
+.detailview_time {
+    color: #747474;
+    font-size: 12px;
+}
+.detailview_option {
+    float: right;
+}
+.option_text {
+    color: #4B4B4B;
+    font-size: 12px;
+}
+.link_separate {
+    margin-right: 10px;
+}
+.detailview_section {
+    text-align: left;
+    width: 670px;
+    margin-top: 10px;
+}
+.detailview_lecture {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.detailview_content {
+    font-size: 13px;
+}
+.detailview_footer {
+    text-align: left;
+    width: 670px;
+    margin: 10px 0px;
+}
+.detailview_status {
+    margin-bottom: 15px;
+}
+.detailview_img {
+    position: relative;
+    top: 2px;
+}
+.detailview_comment {
+    margin-left: 10px;
+}
+.deatilview_button {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #4B4B4B;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.detailview_commentbox {
+    width: 700px;
+    padding: 10px;
+    border: 1px solid black;
+    border-top: 0px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.comment_header {
+    width: 680px;
+    height: 25px;
+}
+.comment_userimg {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.comment_name {
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+}
+.comment_option {
+    float: right;
+    line-height: 15px;
+}
+.comment_section {
+    width: 680px;
+}
+.comment_text {
+    font-size: 15px;
+}
+.comment_footer {
+    width: 680px;
+}
+.comment_time {
+    color: #747474;
+    font-size: 12px;
+}
+.detailview_writebox {
+    width: 700px;
+    height: 45px;
+    border: 1px solid black;
+    border-top: 0px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+.write_input {
+    width: 588px;
+    padding: 0 10px;
+    border: 0px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+.write_input:focus {
+    outline: none;
+}
+.write_button {
+    width: 50px;
+    height: 44px;
+    border: 0;
+    border-left: 1px solid black;
+    font-size: 14px;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #96B3FC;
+}

@@ -23,14 +23,14 @@ function View(){
                         <span class="view_professor">오영재 교수님</span>
                     </div>
                     <div class="view_content">
-                        <span>강의가 완전 유익해요!!<br/>교수님이 친절하세요!</span>
+                        <span>강의가 완전 유익해요!!<br/>교수님이 친절하세요!<br/>asd</span>
                     </div>
                     <div class="view_footer">
                         <span class="view_time">8분 전</span>
                         <span class="view_name">익명</span>
                         <div class="view_status">
-                            <span class="view_like"><img class="view_img" src={like}/> 4</span>
-                            <span class="view_comment"><img class="view_img" src={comment}/> 6</span>
+                            <span class="view_like"><img class="view_img" src={like} alt="좋아요 이미지"/> 4</span>
+                            <span class="view_comment"><img class="view_img" src={comment} alt="말풍선 이미지"/> 6</span>
                         </div>
                     </div>
                 </div>
@@ -46,8 +46,8 @@ function View(){
                         <span class="view_time">8분 전</span>
                         <span class="view_name">상남자</span>
                         <div class="view_status">
-                            <span class="view_like"><img class="view_img" src={like}/> 11</span>
-                            <span class="view_comment"><img class="view_img" src={comment}/> 32</span>
+                            <span class="view_like"><img class="view_img" src={like} alt="좋아요 이미지"/> 11</span>
+                            <span class="view_comment"><img class="view_img" src={comment} alt="말풍선 이미지"/> 32</span>
                         </div>
                     </div>
                 </div>
@@ -66,8 +66,11 @@ function View(){
                     </div>
                 </div>
             </div>
-            <div class="hot_box">
-
+            <div class="link_box">
+                <span>
+                    동양미래대학교<br/>
+                    홈페이지 바로가기
+                </span>
             </div>
         </div>
     );

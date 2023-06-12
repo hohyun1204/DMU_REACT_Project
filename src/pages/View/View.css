@@ -9,7 +9,6 @@
     width: 700px;
     padding: 10px;
     border: 1px solid black;
-    border-radius: 10px;
     box-sizing: border-box;
     margin-bottom: 10px;
     cursor: pointer;
@@ -32,6 +31,13 @@
     font-size: 12px;
     margin-top: 4px;
     color: #747474;
+}
+.view_content span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 .view_footer {
     text-align: left;
@@ -75,7 +81,6 @@
     font-weight: 400;
     line-height: 38px;
     border: 1px solid #6DA6FE;
-    border-radius: 5px;
     color: #6DA6FE;
     box-sizing: border-box;
     cursor: pointer;
@@ -90,11 +95,10 @@
 .next {
     float: right;
 }
-.hot_box {
+.link_box {
     float: right;
     width: 270px;
     height: 150px;
     border: 1px solid black;
-    border-radius: 10px;
     box-sizing: border-box;
 }
