@@ -96,7 +96,7 @@ function DetailView(){
         content = <Update id={boards[index].id} userid={boards[index].userid} name={boards[index].name} lecture={boards[index].lecture} professor={boards[index].professor} 
         content={boards[index].content} like={like} comment={boards[index].comment} date={boards[index].date} 
         onUpdate={(id, userid, name, lecture, professor, content, like, comment, date)=>{
-            if(window.confirm('수정하시겠습니까')){
+            if(window.confirm('수정하시겠습니까?')){
                 dispatch(updateAction({
                     id: id,
                     userid: userid,
