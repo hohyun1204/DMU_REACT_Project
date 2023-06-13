@@ -4,14 +4,13 @@ import { useNavigate } from "react-router-dom";
 import like from "assets/images/like.png"
 import comment from "assets/images/comment.png"
 import { viewAction } from "modules/boardReducer";
+import univ_img from "assets/images/univ_logo.svg"
 
 function View(){
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { boards } = useSelector(state => state.boardReducer)
     const reverse = [...boards].reverse();
-
-    console.log(boards)
 
     const showDetailView = (id) => {
         dispatch(viewAction(id))
@@ -47,23 +46,6 @@ function View(){
                         </div>
                         ))
                 }
-                {/* <div class="view_box" onClick={() => showDetailView('1')}>
-                    <div class="view_header">
-                        <span class="view_lecture">웹 클라이언트 프로그래밍</span>
-                        <span class="view_professor">오영재 교수님</span>
-                    </div>
-                    <div class="view_content">
-                        <span>강의가 완전 유익해요!!<br/>교수님이 친절하세요!<br/>asd</span>
-                    </div>
-                    <div class="view_footer">
-                        <span class="view_time">8분 전</span>
-                        <span class="view_name">익명</span>
-                        <div class="view_status">
-                            <span class="view_like"><img class="view_img" src={like} alt="좋아요 이미지"/> 4</span>
-                            <span class="view_comment"><img class="view_img" src={comment} alt="말풍선 이미지"/> 6</span>
-                        </div>
-                    </div>
-                </div> */}
                 {/* <div class="view_page">
                     <div class="view_page_button first">
                         처음
@@ -76,7 +58,10 @@ function View(){
                     </div>
                 </div> */}
             </div>
-            <div class="link_box">
+            <div class="link_box pointer" onClick={()=>{
+                window.open('https://www.dongyang.ac.kr/dongyang/index.do', '_blank')
+            }}>
+                <img class="univ_img" src={univ_img} alt="학교로고 이미지"></img>
                 <span>
                     동양미래대학교<br/>
                     홈페이지 바로가기

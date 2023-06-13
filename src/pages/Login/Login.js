@@ -36,7 +36,7 @@ function Login(){
         <div class="user_box">
             <form onSubmit={onLogin}>
                 <input class="input_box text" type="text" name="id" onKeyUp={CheckNumber} onKeyDown={EnterPress} maxLength={8} placeholder='학번'></input>
-                <input class="input_box text" type="password" id="pw" name="pw" placeholder='비밀번호'></input>
+                <input class="input_box text" type="password" id="pw" name="pw" maxLength={16} placeholder='비밀번호'></input>
                 <input class="input_box submit" type="submit" value="로그인"></input>
                 {/* <label for="check" class="login_check">
                     <input class="checkbox" type="checkbox" id="check" name="keeplogin" value="keep"></input>

@@ -104,4 +104,11 @@
     height: 150px;
     border: 1px solid black;
     box-sizing: border-box;
+    text-align: center;
+}
+.univ_img {
+    display: block;
+    width: 200px;
+    height: 80px;
+    margin: 15px auto 5px auto;
 }

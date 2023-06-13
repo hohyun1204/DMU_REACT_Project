@@ -60,13 +60,15 @@ function Join(){
             return
         }
 
-        dispatch(joinAction({
-            id: id.value.trim(),
-            password: pw.value.trim(),
-            email: email.value.trim(),
-            name: name.value.trim()
-        }))
-        navigate('/login')
+        if(window.confirm('회원가입하시겠습니까?')) {
+            dispatch(joinAction({
+                id: id.value.trim(),
+                password: pw.value.trim(),
+                email: email.value.trim(),
+                name: name.value.trim()
+            }))
+            navigate('/login')
+        }
     }
 
     return(
@@ -74,7 +76,7 @@ function Join(){
             <form onSubmit={onSubmit}>
                 <input class="input_box text" type="text" name="name" maxLength={8} placeholder='닉네임'></input>
                 <input class="input_box text" type="text" name="id" onKeyUp={CheckNumber} onKeyDown={EnterPress} maxLength={8} placeholder='학번'></input>
-                <input class="input_box text" type="password" id="pw" name="pw" placeholder='비밀번호'></input>
+                <input class="input_box text" type="password" id="pw" name="pw" maxLength={16} placeholder='비밀번호'></input>
                 <input class="input_box text" type="email" id="email" name="email" placeholder='비밀번호 분실 시 확인용 이메일'></input> 
                 <input class="input_box submit" type="submit" value="회원가입"></input>
             </form>

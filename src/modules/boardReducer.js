@@ -1,5 +1,7 @@
 const WRITE_BOARD = 'WRITE_BOARD';
 const VIEW_BOARD = 'VIEW_BOARD';
+const UPDATE_BOARD = 'UPDATE_BOARD';
+const DELETE_BOARD = 'DELETE_BOARD';
 const CLICK_LIKE = 'CLICK_LIKE';
 
 export const writeAction = (inputData) => {
@@ -28,6 +30,32 @@ export const viewAction = (id) => {
     }
 }
 
+export const updateAction = (inputData) => {
+    return {
+        type: UPDATE_BOARD,
+        inputData: {
+            id: inputData.id,
+            userid: inputData.userid,
+            name: inputData.name,
+            lecture: inputData.lecture,
+            professor: inputData.professor,
+            content: inputData.content,
+            like: inputData.like,
+            comment: inputData.comment,
+            date: inputData.date
+        }
+    }
+}
+
+export const deleteAction = (id) => {
+    return {
+        type: DELETE_BOARD,
+        inputData: {
+            id: id
+        }
+    }
+}
+
 export const likeAction = (inputData) => {
     return {
         type: CLICK_LIKE,
@@ -41,6 +69,7 @@ export const likeAction = (inputData) => {
 
 const initialState = {
     boards: [],
+    likes: [],
     lastId: 0,
     viewId: null
 }
@@ -57,10 +86,25 @@ export default function boardReducer(state = initialState, action) {
                 ...state, 
                 viewId: action.inputData.id
             }
-        case CLICK_LIKE:
-            let boards = {...state.boards};
-            boards[action.inputData.index].comment++;
+        case UPDATE_BOARD:
+            const boards = state.boards;
+            const idx = state.boards.findIndex(it => it.id === action.inputData.id);
+            boards[idx] = action.inputData
             return {
+                ...state,
+                boards
+            }
+        case DELETE_BOARD:
+            return {
+                ...state,
+                boards: state.boards.filter(it => it.id !== action.inputData.id)
+            }
+        case CLICK_LIKE:
+            const boards2 = state.boards;
+            boards2[action.inputData.index].like++;
+            return {
+                ...state,
+                boards2
             }
         default:
             return state

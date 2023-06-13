@@ -159,3 +159,45 @@
     cursor: pointer;
     background-color: #96B3FC;
 }
+
+/* 업데이트 컴포넌트 스타일 */
+.update_input:focus {
+    outline: none;
+}
+.update_lecture {
+    width: 400px;
+    height: 59px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 0 0 15px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.update_professor {
+    width: 268px;
+    height: 59px;
+    font-size: 16px;
+    padding: 0 0 0 15px;
+    border: 1px solid black;
+    border-left: 0;
+    box-sizing: border-box;
+}
+.update_content {
+    width: 670px;
+    height: 400px;
+    padding: 15px;
+    font-size: 14px;
+    resize: none;
+    border: 1px solid black;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+}
+.submit_button {
+    position: relative;
+    top: -517px;
+    right: -580px;
+    background-color: white;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}

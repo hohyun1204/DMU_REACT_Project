@@ -60,17 +60,19 @@ function Write(){
         if(anonymous.checked) {
             name = '익명'
         }
-
-        dispatch(writeAction({
-            id: lastId + 1,
-            userid: login_id,
-            name: name,
-            lecture: lecture.value.trim(),
-            professor: professor.value.trim(),
-            content: content.value,
-            date: date
-        }))
-        navigate('/')
+        
+        if(window.confirm('작성하시겠습니까?')) {
+            dispatch(writeAction({
+                id: lastId + 1,
+                userid: login_id,
+                name: name,
+                lecture: lecture.value.trim(),
+                professor: professor.value.trim(),
+                content: content.value,
+                date: date
+            }))
+            navigate('/')
+        }
     }
 
     return(

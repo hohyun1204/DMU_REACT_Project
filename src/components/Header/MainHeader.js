@@ -22,7 +22,9 @@ function MainHeader(){
     let login = null;
     if(!!login_id) { // 로그인 상태
         login = <img class="menu_img" src={logout} alt="로그아웃" onClick={()=>{
-            onLogout()
+            if(window.confirm("로그아웃하시겠습니까?")) {
+                onLogout()
+            }
         }}></img>
     } else { // 비로그인 상태
         login = <Link to="/login"><img class="menu_img" src={user} alt="유저 이미지"></img></Link>
@@ -38,7 +40,10 @@ function MainHeader(){
             </div>
             <ul class="menu">
                 <li>
-                    <Link to="/search"><img class="menu_img" src={search} alt="검색 이미지"></img></Link>
+                    {/* <Link to="/search"><img class="menu_img" src={search} alt="검색 이미지"></img></Link> */}
+                    <img class="menu_img pointer" src={search} alt="검색 이미지" onClick={()=>{
+                        alert("준비중입니다.")
+                    }}></img>
                 </li>
                 <li>
                     <img class="menu_img" src={write} alt="작성 이미지" onClick={()=>{
